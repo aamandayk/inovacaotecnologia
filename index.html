@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes Vivas | Plataforma de Relações Étnico-Raciais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <!-- Substitua por: <img src="assets/logo.png" alt="Logo Raízes Vivas"> -->
+      <div class="logo-icon">🌿</div>
+      <span>Raízes Vivas</span>
+    </div>
+    <nav id="mainNav">
+      <button class="nav-btn active" data-section="home">Início</button>
+      <button class="nav-btn" data-section="biografias">Biografias</button>
+      <button class="nav-btn" data-section="conceitos">Conceitos</button>
+      <button class="nav-btn" data-section="timeline">Linha do Tempo</button>
+      <button class="nav-btn" data-section="mapa">Mapa</button>
+      <button class="nav-btn" data-section="quiz">Quiz</button>
+      <button class="nav-btn" data-section="trilhas">Trilhas</button>
+      <button class="nav-btn" data-section="calendario">Calendário</button>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!-- ========== HOME ========== -->
+  <section id="home" class="section active">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Valorizando as <span>Relações Étnico-Raciais</span> com conhecimento e cultura</h1>
+        <p>Uma plataforma educativa e cultural que conecta história, memória, criação e pertencimento. Aprenda, compartilhe e celebre a diversidade étnico-racial brasileira.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="navegar('quiz')">Fazer o Quiz</button>
+          <button class="btn btn-outline" onclick="navegar('biografias')">Conhecer Protagonistas</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="emoji">🌍</div>
+          <h3>Memória Viva</h3>
+          <p>Histórias, territórios e saberes de povos africanos, afro-brasileiros e indígenas em um só lugar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 3rem 5%;">
+      <div class="section-header">
+        <h2>O que você encontra aqui</h2>
+        <p>Explore conteúdos, teste seus conhecimentos e construa consciência crítica sobre as relações étnico-raciais.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" onclick="navegar('biografias')">
+          <div class="icon">👤</div>
+          <h3>Biografias e Protagonismo</h3>
+          <p>Conheça trajetórias de personalidades negras e indígenas que marcaram a história e o presente.</p>
+        </div>
+        <div class="feature-card" onclick="navegar('conceitos')">
+          <div class="icon">📖</div>
+          <h3>Conceitos & Letramento Racial</h3>
+          <p>Entenda de forma clara conceitos essenciais como racismo estrutural, antirracismo e ancestralidade.</p>
+        </div>
+        <div class="feature-card" onclick="navegar('quiz')">
+          <div class="icon">🎯</div>
+          <h3>Quiz Gamificado</h3>
+          <p>Teste seus conhecimentos com perguntas interativas, pontuação e explicações educativas.</p>
+        </div>
+        <div class="feature-card" onclick="navegar('mapa')">
+          <div class="icon">🗺️</div>
+          <h3>Mapa de Memórias</h3>
+          <p>Descubra quilombos, terras indígenas e territórios de resistência em todo o Brasil.</p>
+        </div>
+        <div class="feature-card" onclick="navegar('timeline')">
+          <div class="icon">📜</div>
+          <h3>Linha do Tempo</h3>
+          <p>Navegue por eventos históricos sob múltiplas perspectivas e vozes.</p>
+        </div>
+        <div class="feature-card" onclick="navegar('trilhas')">
+          <div class="icon">🛤️</div>
+          <h3>Trilhas Formativas</h3>
+          <p>Percursos educativos para aprofundar conhecimentos de forma estruturada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BIOGRAFIAS ========== -->
+  <section id="biografias" class="section">
+    <div class="section-header">
+      <h2>Biografias e Protagonismo</h2>
+      <p>Personalidades negras e indígenas que construíram e continuam construindo a história do Brasil.</p>
+    </div>
+
+    <div class="bio-grid">
+      <div class="bio-card">
+        <div class="bio-img">⚔️</div>
+        <div class="bio-body">
+          <h3>Dandara dos Palmares</h3>
+          <span class="tag">Resistência • Século XVII</span>
+          <p>Guerreira e líder militar do Quilombo dos Palmares. Estratégica e corajosa, foi uma das principais figuras da resistência negra no período colonial.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">🛡️</div>
+        <div class="bio-body">
+          <h3>Zumbi dos Palmares</h3>
+          <span class="tag">Resistência • 1655–1695</span>
+          <p>Último líder do Quilombo dos Palmares. Tornou-se o maior símbolo da resistência negra no Brasil. Sua morte é lembrada no Dia da Consciência Negra.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">📚</div>
+        <div class="bio-body">
+          <h3>Machado de Assis</h3>
+          <span class="tag">Literatura • 1839–1908</span>
+          <p>Um dos maiores escritores da literatura brasileira e mundial. Negro, neto de escravizados, fundou a Academia Brasileira de Letras.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">✍️</div>
+        <div class="bio-body">
+          <h3>Maria Firmina dos Reis</h3>
+          <span class="tag">Literatura • 1822–1917</span>
+          <p>Primeira romancista brasileira. Autora de “Úrsula” (1859), obra abolicionista que deu voz às personagens negras escravizadas.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">🌿</div>
+        <div class="bio-body">
+          <h3>Ailton Krenak</h3>
+          <span class="tag">Liderança Indígena • Contemporâneo</span>
+          <p>Líder indígena, ambientalista e escritor. Autor de “Ideias para adiar o fim do mundo”. Uma das vozes mais importantes dos povos originários hoje.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">🎓</div>
+        <div class="bio-body">
+          <h3>Sueli Carneiro</h3>
+          <span class="tag">Filosofia & Ativismo • Contemporânea</span>
+          <p>Filósofa e ativista antirracista. Fundadora do Geledés – Instituto da Mulher Negra. Referência no pensamento negro brasileiro.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">🪶</div>
+        <div class="bio-body">
+          <h3>Sonia Guajajara</h3>
+          <span class="tag">Política Indígena • Contemporânea</span>
+          <p>Liderança indígena e atual Ministra dos Povos Indígenas. Símbolo da luta pelos direitos dos povos originários no Brasil contemporâneo.</p>
+        </div>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-img">👑</div>
+        <div class="bio-body">
+          <h3>Tereza de Benguela</h3>
+          <span class="tag">Resistência • Século XVIII</span>
+          <p>Liderou o Quilombo de Quariterê (MT) por mais de 20 anos após a morte de seu companheiro. Símbolo de liderança feminina negra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONCEITOS ========== -->
+  <section id="conceitos" class="section">
+    <div class="section-header">
+      <h2>Conceitos & Letramento Racial</h2>
+      <p>Entenda os conceitos fundamentais para uma educação antirracista e um convívio mais justo.</p>
+    </div>
+
+    <div class="conceitos-grid">
+      <div class="conceito-card">
+        <h3>🧱 Racismo Estrutural</h3>
+        <p>É a forma como o racismo está organizado na sociedade: nas instituições, leis, economia, educação e cultura. Não depende apenas de ações individuais, mas de um sistema que historicamente privilegia uns e discrimina outros.</p>
+      </div>
+
+      <div class="conceito-card">
+        <h3>✊ Antirracismo</h3>
+        <p>Mais do que “não ser racista”. É a prática ativa de combater o racismo em todas as suas formas — nas relações pessoais, nas instituições e nas políticas públicas. Exige ação consciente e contínua.</p>
+      </div>
+
+      <div class="conceito-card">
+        <h3>🌳 Ancestralidade</h3>
+        <p>A conexão com as gerações anteriores, seus saberes, valores, lutas e legados. Para povos africanos e indígenas, a ancestralidade é fonte de identidade, força e pertencimento.</p>
+      </div>
+
+      <div class="conceito-card">
+        <h3>🪞 Representatividade</h3>
+        <p>A presença de pessoas negras e indígenas em espaços de poder, mídia, educação e cultura. Ver-se representado fortalece a autoestima e amplia as possibilidades de futuro das novas gerações.</p>
+      </div>
+
+      <div class="conceito-card">
+        <h3>🏠 Pertencimento</h3>
+        <p>O sentimento de fazer parte de um grupo, de uma história e de um território. O racismo tenta negar esse direito. Reconhecer e valorizar as identidades é um ato de reparação e dignidade.</p>
+      </div>
+
+      <div class="conceito-card">
+        <h3>⚖️ Equidade</h3>
+        <p>Diferente de igualdade formal, a equidade reconhece que as pessoas partem de lugares diferentes e precisam de condições específicas para ter as mesmas oportunidades. É justiça com contexto histórico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LINHA DO TEMPO ========== -->
+  <section id="timeline" class="section">
+    <div class="section-header">
+      <h2>Linha do Tempo Multivocal</h2>
+      <p>Eventos históricos contados por diferentes vozes e perspectivas.</p>
+    </div>
+
+    <div class="timeline-filters">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="africa">África</button>
+      <button class="filter-btn" data-filter="brasil">Brasil</button>
+      <button class="filter-btn" data-filter="indigena">Povos Indígenas</button>
+      <button class="filter-btn" data-filter="resistencia">Resistência</button>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-cat="africa">
+        <span class="year">Séculos XII–XVI</span>
+        <h3>Reinos e Impérios Africanos</h3>
+        <p>Grandes civilizações como Mali, Songhai, Congo e Benin floresceram com sistemas políticos, econômicos e culturais sofisticados, muito antes da chegada dos europeus.</p>
+      </div>
+      <div class="timeline-item" data-cat="brasil">
+        <span class="year">1500–1888</span>
+        <h3>Diáspora Africana e Escravidão no Brasil</h3>
+        <p>Mais de 4,8 milhões de africanos foram trazidos forçadamente. Mesmo sob violência extrema, construíram culturas, religiões, línguas e formas de resistência que moldaram o Brasil.</p>
+      </div>
+      <div class="timeline-item" data-cat="resistencia">
+        <span class="year">1605–1695</span>
+        <h3>Quilombo dos Palmares</h3>
+        <p>O maior quilombo das Américas durou quase um século. Liderado por Zumbi e Dandara, tornou-se símbolo máximo de resistência negra e liberdade.</p>
+      </div>
+      <div class="timeline-item" data-cat="indigena">
+        <span class="year">Século XVI em diante</span>
+        <h3>Resistências Indígenas</h3>
+        <p>Povos originários enfrentaram invasão, doenças e escravização. Muitos mantiveram línguas, cosmologias e territórios através de lutas contínuas até os dias atuais.</p>
+      </div>
+      <div class="timeline-item" data-cat="brasil">
+        <span class="year">13 de maio de 1888</span>
+        <h3>Abolição da Escravidão</h3>
+        <p>A Lei Áurea encerrou legalmente a escravidão, mas não garantiu terras, educação ou reparação. O pós-abolição foi marcado por exclusão e novas formas de racismo.</p>
+      </div>
+      <div class="timeline-item" data-cat="resistencia">
+        <span class="year">20 de novembro de 1695</span>
+        <h3>Morte de Zumbi dos Palmares</h3>
+        <p>Data que se tornou o Dia da Consciência Negra. Representa a luta contínua por dignidade, memória e justiça racial no Brasil.</p>
+      </div>
+      <div class="timeline-item" data-cat="brasil">
+        <span class="year">2003 / 2008</span>
+        <h3>Leis 10.639 e 11.645</h3>
+        <p>Tornaram obrigatório o ensino da história e cultura afro-brasileira e indígena em todas as escolas do país, um marco na educação antirracista.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAPA ========== -->
+  <section id="mapa" class="section">
+    <div class="section-header">
+      <h2>Mapa de Memórias</h2>
+      <p>Territórios de resistência, saberes e culturas vivas em todo o Brasil.</p>
+    </div>
+
+    <div class="map-container">
+      <div class="map-placeholder">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <path fill="#ffffff" d="M280,40 C300,50 320,70 330,100 C340,130 350,150 345,180 C340,210 330,240 310,260 C290,280 270,300 240,320 C210,340 180,350 150,345 C120,340 100,320 90,290 C80,260 70,230 75,200 C80,170 90,140 110,120 C130,100 160,80 190,60 C220,40 250,30 280,40 Z"/>
+        </svg>
+
+        <div class="map-points">
+          <div class="map-point" style="top: 22%; left: 42%;" data-label="Amazônia" onclick="mostrarPonto(this, 'Aldeias Indígenas (AM/PA)', 'Povos da Amazônia que protegem a floresta e transmitem conhecimentos milenares sobre a biodiversidade e cosmologias ancestrais.')"></div>
+          <div class="map-point" style="top: 28%; left: 72%;" data-label="Pernambuco" onclick="mostrarPonto(this, 'Quilombo do Catucá (PE)', 'Histórico quilombo urbano com memória de luta e forte presença da cultura afro-pernambucana.')"></div>
+          <div class="map-point" style="top: 42%; left: 78%;" data-label="Bahia" onclick="mostrarPonto(this, 'Quilombo do Remanso (BA)', 'Comunidade quilombola com forte tradição de samba de roda, agricultura tradicional e resistência cultural.')"></div>
+          <div class="map-point" style="top: 48%; left: 48%;" data-label="Goiás" onclick="mostrarPonto(this, 'Comunidade Kalunga (GO)', 'Um dos maiores territórios quilombolas do Brasil, com rica tradição cultural e história de resistência.')"></div>
+          <div class="map-point" style="top: 40%; left: 52%;" data-label="Mato Grosso" onclick="mostrarPonto(this, 'Terras Indígenas (MT)', 'Diversos povos, como os Xavante e Bororo, mantêm línguas, rituais e modos de vida ancestrais.')"></div>
+          <div class="map-point" style="top: 62%; left: 68%;" data-label="Rio de Janeiro" onclick="mostrarPonto(this, 'Terreiro de Candomblé (RJ)', 'Espaço de preservação da religião de matriz africana, acolhimento comunitário e transmissão de saberes.')"></div>
+          <div class="map-point" style="top: 58%; left: 60%;" data-label="São Paulo" onclick="mostrarPonto(this, 'Comunidades Negras Urbanas (SP)', 'Territórios de cultura, samba, jongo e mobilização antirracista nas periferias e centros urbanos.')"></div>
+          <div class="map-point" style="top: 75%; left: 58%;" data-label="Rio Grande do Sul" onclick="mostrarPonto(this, 'Quilombos e Comunidades (RS)', 'Presença negra histórica no Sul, com comunidades quilombolas e tradições culturais afro-gaúchas.')"></div>
+        </div>
+
+        <div class="map-popup" id="mapPopup">
+          <button class="popup-close" onclick="fecharPopup()">×</button>
+          <h4 id="popupTitle">Título</h4>
+          <p id="popupDesc">Descrição</p>
+        </div>
+      </div>
+
+      <div class="map-info">
+        <div class="map-stat">
+          <div class="number">2.800+</div>
+          <div class="label">Comunidades Quilombolas</div>
+        </div>
+        <div class="map-stat">
+          <div class="number">305</div>
+          <div class="label">Povos Indígenas</div>
+        </div>
+        <div class="map-stat">
+          <div class="number">1.200+</div>
+          <div class="label">Terreiros mapeados</div>
+        </div>
+        <div class="map-stat">
+          <div class="number">∞</div>
+          <div class="label">Histórias para contar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUIZ ========== -->
+  <section id="quiz" class="section">
+    <div class="section-header">
+      <h2>Quiz de Relações Étnico-Raciais</h2>
+      <p>Teste seus conhecimentos de forma interativa e educativa. Cada acerto vale 10 pontos!</p>
+    </div>
+
+    <div class="quiz-container">
+      <div id="quizContent">
+        <div class="quiz-header">
+          <div class="quiz-score">
+            <span id="quizScore">Pontuação: 0</span>
+            <span id="quizProgress">Pergunta 1 de 6</span>
+          </div>
+        </div>
+
+        <div class="quiz-question" id="quizQuestion">
+          Clique em "Começar Quiz" para iniciar!
+        </div>
+
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+
+        <div class="quiz-actions">
+          <button class="btn btn-primary" id="quizStart" onclick="iniciarQuiz()">Começar Quiz</button>
+          <button class="btn btn-primary" id="quizNext" style="display:none;" onclick="proximaPergunta()">Próxima pergunta</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="quizResult">
+        <h3>Resultado Final</h3>
+        <div class="final-score" id="finalScore">0 / 60</div>
+        <p id="resultMessage"></p>
+        <button class="btn btn-primary" style="margin-top:1.2rem;" onclick="iniciarQuiz()">Tentar novamente</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRILHAS ========== -->
+  <section id="trilhas" class="section">
+    <div class="section-header">
+      <h2>Trilhas Formativas</h2>
+      <p>Percursos educativos para aprofundar conhecimentos e desenvolver consciência crítica.</p>
+    </div>
+
+    <div class="trilhas-grid">
+      <div class="trilha-card">
+        <div class="trilha-header" style="background: linear-gradient(135deg, #1a3c34, #2d6a4f);">🌍</div>
+        <div class="trilha-body">
+          <h3>África para além da escravidão</h3>
+          <p>Conheça os reinos, ciências, artes e filosofias africanas antes e durante a diáspora.</p>
+          <div class="trilha-meta"><span>📚 8 módulos</span><span>⏱️ 6 horas</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 35%;"></div></div>
+          <small>35% concluído</small>
+        </div>
+      </div>
+
+      <div class="trilha-card">
+        <div class="trilha-header" style="background: linear-gradient(135deg, #bc6c25, #d4a373);">🛡️</div>
+        <div class="trilha-body">
+          <h3>Racismo estrutural e antirracismo</h3>
+          <p>Entenda como o racismo se organiza na sociedade e quais práticas combatem essa realidade.</p>
+          <div class="trilha-meta"><span>📚 6 módulos</span><span>⏱️ 4,5 horas</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 10%;"></div></div>
+          <small>10% concluído</small>
+        </div>
+      </div>
+
+      <div class="trilha-card">
+        <div class="trilha-header" style="background: linear-gradient(135deg, #40916c, #2d6a4f);">🪶</div>
+        <div class="trilha-body">
+          <h3>Povos Indígenas: passado e presente</h3>
+          <p>Diversidade, cosmologias, lutas territoriais e contribuições dos povos originários.</p>
+          <div class="trilha-meta"><span>📚 7 módulos</span><span>⏱️ 5 horas</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+          <small>Não iniciada</small>
+        </div>
+      </div>
+
+      <div class="trilha-card">
+        <div class="trilha-header" style="background: linear-gradient(135deg, #1b4332, #bc6c25);">🎭</div>
+        <div class="trilha-body">
+          <h3>Culturas afro-diaspóricas no século XXI</h3>
+          <p>Música, literatura, cinema, moda e tecnologia produzidos pela diáspora africana hoje.</p>
+          <div class="trilha-meta"><span>📚 5 módulos</span><span>⏱️ 3,5 horas</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 60%;"></div></div>
+          <small>60% concluído</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CALENDÁRIO ========== -->
+  <section id="calendario" class="section">
+    <div class="section-header">
+      <h2>Calendário de Celebrações e Resistências</h2>
+      <p>Datas importantes para lembrar, estudar e celebrar.</p>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="event-card">
+        <div class="event-date">19 de abril</div>
+        <h3>Dia dos Povos Indígenas</h3>
+        <p>Data dedicada à valorização das culturas, línguas e direitos dos povos originários do Brasil.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-date">13 de maio</div>
+        <h3>Abolição da Escravidão</h3>
+        <p>Marco legal da abolição. Momento de reflexão sobre o que ainda falta ser conquistado em termos de equidade.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-date">20 de novembro</div>
+        <h3>Dia da Consciência Negra</h3>
+        <p>Em memória a Zumbi dos Palmares. Principal data de afirmação da luta antirracista no Brasil.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-date">25 de julho</div>
+        <h3>Dia da Mulher Negra Latino-Americana e Caribenha</h3>
+        <p>Celebra a resistência e a contribuição das mulheres negras na construção das sociedades latino-americanas.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Setembro / Outubro</div>
+        <h3>Festas de Iemanjá e outras celebrações</h3>
+        <p>Momentos de devoção, cultura e encontro das religiões de matriz africana em diversas cidades.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Todo o ano</div>
+        <h3>Semana da Consciência Negra (escolas)</h3>
+        <p>Sugestões de atividades, rodas de conversa e materiais prontos para uso em sala de aula.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>🌿 Raízes Vivas</h3>
+        <p>Plataforma educativa e cultural de valorização das Relações Étnico-Raciais. Construindo conhecimento, memória e pertencimento.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#" onclick="navegar('home'); return false;">Início</a></li>
+          <li><a href="#" onclick="navegar('biografias'); return false;">Biografias</a></li>
+          <li><a href="#" onclick="navegar('conceitos'); return false;">Conceitos</a></li>
+          <li><a href="#" onclick="navegar('quiz'); return false;">Quiz</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#" onclick="navegar('mapa'); return false;">Mapa de Memórias</a></li>
+          <li><a href="#" onclick="navegar('timeline'); return false;">Linha do Tempo</a></li>
+          <li><a href="#" onclick="navegar('trilhas'); return false;">Trilhas</a></li>
+          <li><a href="#" onclick="navegar('calendario'); return false;">Calendário</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Protótipo educativo • Raízes Vivas © 2025</p>
+      <p class="autores">Desenvolvido por: <strong>Amanda, <strong>Rafael e <strong>Larissa — Turma DSB
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" onclick="fecharModal()">×</button>
+      <h2 style="margin-bottom:1rem;">Álbum de Ancestralidade</h2>
+      <p style="margin-bottom:1.2rem; color:#555;">Em breve você poderá criar seu álbum digital com fotos, áudios, receitas e histórias da sua família e comunidade.</p>
+      <button class="btn btn-primary" onclick="fecharModal()">Entendi</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
